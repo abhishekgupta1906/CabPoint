@@ -106,3 +106,64 @@ curl -X POST http://localhost:3000/users/login \
 }
 ```
 
+## User Profile
+
+### Endpoint
+
+`GET /users/profile`
+
+### Description
+
+Retrieves the authenticated user's profile information.
+
+### Example Usage
+
+**Request:**
+
+```bash
+curl -X GET http://localhost:3000/users/profile \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer your_jwt_token_here"
+```
+
+**Successful Response:**
+
+```json
+{
+  "_id": "60d0fe4f5311236168a109ca",
+  "fullname": {
+    "firstname": "Jane",
+    "lastname": "Doe"
+  },
+  "email": "jane.doe@example.com"
+}
+```
+
+## User Logout
+
+### Endpoint
+
+`GET /users/logout`
+
+### Description
+
+Logs out the authenticated user by invalidating the user's token and clearing authentication cookies.
+
+### Example Usage
+
+**Request:**
+
+```bash
+curl -X GET http://localhost:3000/users/logout \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer your_jwt_token_here"
+```
+
+**Successful Response:**
+
+```json
+{
+  "message": "logout success"
+}
+```
+
