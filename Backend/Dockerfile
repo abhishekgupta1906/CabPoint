@@ -1,0 +1,24 @@
+FROM node:20-alpine
+#args
+ARG PORT
+ARG MONGODB_URL
+ARG JWT_SECRET
+ARG GOOGLE_MAPS_API
+
+#env
+ENV PORT=${PORT}
+ENV MONGODB_URL=${MONGODB_URL}
+ENV JWT_SECRET=${JWT_SECRET}
+ENV GOOGLE_MAPS_API=${GOOGLE_MAPS_API}
+
+
+WORKDIR /usr/src/app
+COPY . .
+
+RUN npm install && npm cache clean --force
+
+
+
+EXPOSE 3000
+
+CMD ["npm", "start"]

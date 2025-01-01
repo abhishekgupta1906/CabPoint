@@ -50,7 +50,7 @@ module.exports.getFare = async (req, res) => {
 module.exports.confirmRide = async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        console.log("hellog kya haaal")
+        // console.log("hellog kya haaal")
       return res.status(400).json({ errors: errors.array() });
     }
     const {rideId} = req.body;
