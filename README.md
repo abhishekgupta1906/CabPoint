@@ -100,8 +100,8 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 
 ![Ride Create](screenshots/create.png)
 ![Get Time and Distance between Routes](screenshots/Distance.png)
-![GET FARE](screenshots/create_ride.png)
-![Auto Complete Suggestions](screenshots/AutoCompleteSuggestions)
+![GET FARE](screenshots/Fare.png)
+![Auto Complete Suggestions](screenshots/AutoCompleteSuggestions.png)
 
 
 
